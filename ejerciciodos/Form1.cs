@@ -1,5 +1,9 @@
+using System.Windows.Forms;
+
 namespace ejerciciodos {
     public partial class Form1 : Form {
+
+        private string mensaje = string.Empty; //Hace explicito que el string esta avacio
         public Form1() {
             InitializeComponent();
             formularioInhabilitado();
@@ -13,16 +17,16 @@ namespace ejerciciodos {
 
             int legajo_usuario;
             if (!int.TryParse(maskedTextBox_LEGAJO.Text, out legajo_usuario)) { //valido el legajo
-                MessageBox.Show("El legajo ingresado no es v√°lido.");
+                MessageBox.Show("El legajo ingresado no es v·lido.");
                 return;
-        }
+            }
 
             string fecha_ingreso = maskedTextBoxFechaIngreso.Text;
             string carrera = string.Empty; 
 
 
             if (radioButton_ingeniarias.Checked) {
-                carrera = "Ingenier√≠a";
+                carrera = "IngenierÌa";
             }
             else if (radioButton_tecn.Checked) {
                 carrera = "Tecnicatura";
@@ -39,7 +43,7 @@ namespace ejerciciodos {
                             $"Legajo: {legajo_usuario}\n" +
                             $"Fecha de Ingreso: {fecha_ingreso}\n" +
                             $"Carrera: {carrera}\n" +
-                            $"Tecnolog√≠as: {tecnologia_html} {tecnologia_csharp} {tecnologia_js} \n ";
+                            $"TecnologÌas: {tecnologia_html} {tecnologia_csharp} {tecnologia_js} \n ";
 
         }
         private void formularioInhabilitado() {
