@@ -44,8 +44,10 @@
             label_resultadoBase = new Label();
             label_resultadoPV = new Label();
             label_resultadoExp = new Label();
+            panel_sexo = new Panel();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_edad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_experiencia).BeginInit();
+            panel_sexo.SuspendLayout();
             SuspendLayout();
             // 
             // textBox_nombre
@@ -66,7 +68,7 @@
             // radioButton_masculino
             // 
             radioButton_masculino.AutoSize = true;
-            radioButton_masculino.Location = new Point(27, 125);
+            radioButton_masculino.Location = new Point(15, 13);
             radioButton_masculino.Name = "radioButton_masculino";
             radioButton_masculino.Size = new Size(80, 19);
             radioButton_masculino.TabIndex = 2;
@@ -77,7 +79,7 @@
             // radioButton_femenino
             // 
             radioButton_femenino.AutoSize = true;
-            radioButton_femenino.Location = new Point(230, 125);
+            radioButton_femenino.Location = new Point(218, 13);
             radioButton_femenino.Name = "radioButton_femenino";
             radioButton_femenino.Size = new Size(78, 19);
             radioButton_femenino.TabIndex = 3;
@@ -163,6 +165,7 @@
             button_limpiar.TabIndex = 11;
             button_limpiar.Text = "Limpiar";
             button_limpiar.UseVisualStyleBackColor = true;
+            button_limpiar.Click += button_limpiar_Click;
             // 
             // label5
             // 
@@ -245,11 +248,21 @@
             label_resultadoExp.TabIndex = 20;
             label_resultadoExp.Text = "0";
             // 
+            // panel_sexo
+            // 
+            panel_sexo.Controls.Add(radioButton_femenino);
+            panel_sexo.Controls.Add(radioButton_masculino);
+            panel_sexo.Location = new Point(12, 112);
+            panel_sexo.Name = "panel_sexo";
+            panel_sexo.Size = new Size(311, 41);
+            panel_sexo.TabIndex = 21;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(336, 450);
+            Controls.Add(panel_sexo);
             Controls.Add(label_resultadoExp);
             Controls.Add(label_resultadoPV);
             Controls.Add(label_resultadoBase);
@@ -267,14 +280,14 @@
             Controls.Add(label1);
             Controls.Add(numericUpDown_experiencia);
             Controls.Add(comboBox_tipo);
-            Controls.Add(radioButton_femenino);
-            Controls.Add(radioButton_masculino);
             Controls.Add(numericUpDown_edad);
             Controls.Add(textBox_nombre);
             Name = "Form1";
             Text = "Calculadora de seguros";
             ((System.ComponentModel.ISupportInitialize)numericUpDown_edad).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_experiencia).EndInit();
+            panel_sexo.ResumeLayout(false);
+            panel_sexo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -302,5 +315,6 @@
         private Label label_resultadoBase;
         private Label label_resultadoPV;
         private Label label_resultadoExp;
+        private Panel panel_sexo;
     }
 }
