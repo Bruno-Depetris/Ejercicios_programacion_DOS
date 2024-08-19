@@ -45,6 +45,7 @@
             label_resultadoPV = new Label();
             label_resultadoExp = new Label();
             panel_sexo = new Panel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_edad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_experiencia).BeginInit();
             panel_sexo.SuspendLayout();
@@ -316,5 +317,6 @@
         private Label label_resultadoPV;
         private Label label_resultadoExp;
         private Panel panel_sexo;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
