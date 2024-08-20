@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             textBox_Nombre = new TextBox();
             textBox_Apellido = new TextBox();
             textBox_Edad = new TextBox();
@@ -44,8 +47,10 @@
             button_Saludar = new Button();
             panel_BotonesAcciones = new Panel();
             panel_textBox = new Panel();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel_BotonesAcciones.SuspendLayout();
             panel_textBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // textBox_Nombre
@@ -203,12 +208,30 @@
             panel_textBox.Size = new Size(254, 167);
             panel_textBox.TabIndex = 15;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(29, 78);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(759, 235);
+            chart1.TabIndex = 16;
+            chart1.Text = "chart1";
+            
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(800, 450);
+            Controls.Add(chart1);
             Controls.Add(panel_textBox);
             Controls.Add(panel_BotonesAcciones);
             Controls.Add(button_Cargar);
@@ -222,6 +245,7 @@
             panel_BotonesAcciones.ResumeLayout(false);
             panel_textBox.ResumeLayout(false);
             panel_textBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -244,5 +268,6 @@
         private Button button_Saludar;
         private Panel panel_BotonesAcciones;
         private Panel panel_textBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
